@@ -1,0 +1,44 @@
+// Header
+.header {
+  padding: 30px 50px;
+
+  &__logo {
+    width: 220px;
+  }
+
+  &__social {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    padding: 6px;
+    background-color: #C7C7C7;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+  }
+
+  &__social:hover {
+    text-decoration: none;
+  }
+
+  .facebook:hover {
+    background-color: #3B5999;
+  }
+
+  .twitter:hover {
+    background-color: #55ACEE;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .header {
+    padding: 20px;
+
+    &__logo {
+      width: 160px;
+    }
+  }
+}

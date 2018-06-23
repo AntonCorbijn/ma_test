@@ -1,0 +1,52 @@
+@mixin font-face($font-family, $font-style, $font-weight, $url, $format) {
+  @font-face {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url($url) format($format);
+  }
+}
+
+@include font-face(Helvetica, null, null, "../../fonts/Helvetica.ttf", "truetype");
+@include font-face(Venetian, null, null, "../../fonts/Venetian.otf", "opentype");
+
+@import "header";
+@import "footer";
+@import "curator";
+
+body {
+  padding: 20px;
+  background-color: #f7f7f7;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: #575656;
+}
+
+.wrapper {
+  background-color: white;
+  border-top: 5.5px solid #6EC7D7;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-red {
+  color: red;
+}
+
+@include media-breakpoint-down(xs) {
+  .body {
+    padding: 10px;
+  }
+}
